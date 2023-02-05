@@ -1,9 +1,20 @@
-node {
-    stage('test'){
-        sh 'echo Hello'
-    }
-    stage('learning'){
-        git url: 'https://github.com/sashi3333/game-of-life.git',
-            branch: 'master'
+pipeline {
+    agent any
+    stages{
+        stage('test'){
+            steps {
+                sh 'Hello world'
+            }
+        }
+        stage('learning'){
+            steps {
+                git url: 'https://github.com/wakaleo/game-of-life.git',
+                    branch: 'master'
+                sh 'mvn package'
+                
+                
+            }
+        }
+            
     }
 }
