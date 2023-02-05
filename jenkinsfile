@@ -8,11 +8,8 @@ pipeline {
         }
         stage('learning'){
             steps {
-                git url: 'https://github.com/wakaleo/game-of-life.git',
-                    branch: 'master'
-                sh 'mvn package'
-                
-                
+                git url: 'https://github.com/sashi3333/game-of-life.git',
+                    branch: 'master'              
             }
         }
             
